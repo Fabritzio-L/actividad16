@@ -21,8 +21,11 @@ def agregar_libro():
 def mostrar_libros():
     if libros:
         print("\nLista de libros")
+        i=1
         for libro in libros:
-            print(f"{libro+1}. {libro.mostrar_detalles()}")
+            print(f"{i}.",end="")
+            libro.mostrar_detalles()
+            i+=1
     else:
         print("No hay libros registrados")
 def eliminar_libro():
@@ -36,3 +39,22 @@ def eliminar_libro():
             break
         else:
             print("Libro no encontrado")
+while True:
+    print("-----MENU-----")
+    print("1. Agregar libro")
+    print("2. Mostrar libros")
+    print("3. Eliminar libro")
+    print("4. Salir")
+    opcion= input("Ingrese una de las opciones: ")
+    match opcion:
+        case "1":
+            agregar_libro()
+        case "2":
+            mostrar_libros()
+        case "3":
+            eliminar_libro()
+        case "4":
+            print("Saliendo del programa...")
+            break
+        case _:
+            print("Ingrese una opcion valida")
