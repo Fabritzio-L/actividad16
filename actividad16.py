@@ -47,7 +47,7 @@ def eliminar_libro():
             print("Libro eliminado")
             libro_encontrado=True
             break
-        else:
+        if not libro_encontrado:
             print("Libro no encontrado")
 while True:
     print("-----MENU-----")
