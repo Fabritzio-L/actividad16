@@ -8,8 +8,18 @@ class Libro:
 libros=[]
 def agregar_libro():
     try:
-        titulo= input("Ingrese el titulo del libro: ")
-        autor= input("Ingrese el autor del libro: ")
+        while True:
+            titulo= input("Ingrese el titulo del libro: ")
+            if not titulo:
+                print("El titulo no puede estar vacio")
+            else:
+                break
+        while True:
+            autor= input("Ingrese el autor del libro: ")
+            if not autor:
+                print("El autor no puede estar vacio")
+            else:
+                break
         año_publicacion= int(input("Ingrese el año de publicacion: "))
         libro= Libro(titulo,autor,año_publicacion)
         libros.append(libro)
