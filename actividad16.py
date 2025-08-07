@@ -25,3 +25,14 @@ def mostrar_libros():
             print(f"{libro+1}. {libro.mostrar_detalles()}")
     else:
         print("No hay libros registrados")
+def eliminar_libro():
+    titulo_buscado= input("Ingrese el titulo del libro a eliminar: ")
+    libro_encontrado = False
+    for libro in libros:
+        if libro.titulo.lower()== titulo_buscado.lower():
+            libros.remove(libro)
+            print("Libro eliminado")
+            libro_encontrado=True
+            break
+        else:
+            print("Libro no encontrado")
