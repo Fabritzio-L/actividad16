@@ -24,4 +24,4 @@ def mostrar_libros():
         for libro in libros:
             print(f"{libro+1}. {libro.mostrar_detalles()}")
     else:
-        print("No hay libros registrados.")
+        print("No hay libros registrados")
